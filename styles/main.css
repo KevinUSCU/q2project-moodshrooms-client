@@ -1,0 +1,11 @@
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#shroom {
+  width: 600px;
+  height: 800px;
+  background: linear-gradient(red, yellow);
+}
