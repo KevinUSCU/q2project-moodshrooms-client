@@ -1,0 +1,19 @@
+{
+  "name": "q2project-moodshrooms-client",
+  "version": "0.0.1",
+  "description": "Moodshrooms client application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinUSCU/q2project-moodshrooms-client.git"
+  },
+  "author": "Kevin Springer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevinUSCU/q2project-moodshrooms-client/issues"
+  },
+  "homepage": "https://github.com/KevinUSCU/q2project-moodshrooms-client#readme"
+}
