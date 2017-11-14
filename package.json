@@ -4,7 +4,8 @@
   "description": "Moodshrooms client application.",
   "main": "index.js",
   "scripts": {
-    "test": "none"
+    "test": "none",
+    "dev": "live-server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/KevinUSCU/q2project-moodshrooms-client/issues"
   },
-  "homepage": "https://github.com/KevinUSCU/q2project-moodshrooms-client#readme"
+  "homepage": "https://github.com/KevinUSCU/q2project-moodshrooms-client#readme",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
 }
