@@ -8,24 +8,45 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- Google Fonts -->
-    
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Indie+Flower" rel="stylesheet">
     <!-- Local Styles & Scripts -->
     <link rel="stylesheet" href="styles/main.css">
     <script defer src="scripts/main.js"></script>
   </head>
   <body>
-    <div id="shroom">
-    <img id="cap" src="images/Moodshroom_0014_Cap-(Wide---Solid-BKG).png">
-    <img id="base" src="images/Moodshroom_0011_Base-(Wide).png">
-    <img id="base" src="images/Moodshroom_0001_Spots.png">
-    <img id="base" src="images/Moodshroom_0006_Eyes-(Large).png">
-    <img id="base" src="images/Moodshroom_0000_Eyebrows.png">
-    <img id="base" src="images/Moodshroom_0004_Eyeballs-(Spaced).png">
-    <img id="base" src="images/Moodshroom_0008_Mouth-(Smile).png">
-
-
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+      <a class="navbar-brand" href="index.html">Moodshrooms</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     
-    </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <button id="nav-shrooms-button" class="btn btn-primary my-2 my-sm-0" type="button">MyShroom</button>
+          </li>
+          <li class="nav-item">
+            <button id="nav-create-button" class="btn btn-primary my-2 my-sm-0" type="button">Create Moodshroom</button>
+          </li>
+          <li class="nav-item">
+            <button id="nav-login-button" class="btn btn-primary my-2 my-sm-0" type="button">Login</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main style='background-image: url("./images/bkgs/michael-kahl-416351.jpg")'>
+      <div id="bkg-credit">
+        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="https://unsplash.com/@schoenkahl?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Michael Kahl"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title></title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">Michael Kahl</span></a>
+      </div>
+      <div class="card translucent position-relative" style="width: 15rem; top: 10px; left: 10px;">
+        <div class="card-body">
+          <h4 class="card-title">Welcome to the Moodshroom Forest!</h4>
+          <p class="card-text">Here you can create your own fun moodshroom characters. Login in above, and then follow the links to explore.</p>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
