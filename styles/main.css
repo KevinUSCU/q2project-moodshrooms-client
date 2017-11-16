@@ -1,5 +1,8 @@
 body {
   font-family: 'Indie Flower', cursive;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .navbar-brand {
@@ -13,14 +16,8 @@ body {
   font-size: 2rem;
 }
 
-main {
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
 #bkg-credit {
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   right: 10px;
 }
