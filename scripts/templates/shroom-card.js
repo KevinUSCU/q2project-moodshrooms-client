@@ -1,37 +1,3 @@
-function getShroomFromDB(id) {
-  return axios.get(`${baseURL}/shrooms/${id}`)
-    .then(shroom => shroom.data)
-}
-
-function getShroomFromForm() {
-  // Get data from form, then populate part image paths from database
-  const promises = [
-    axios.get(`${baseURL}/parts/${cap.value}`),
-    axios.get(`${baseURL}/parts/${base.value}`),
-    axios.get(`${baseURL}/parts/${mouth.value}`),
-    axios.get(`${baseURL}/parts/${eyes.value}`),
-    axios.get(`${baseURL}/parts/${eyeballs.value}`),
-    axios.get(`${baseURL}/parts/${eyebrows.value}`),
-    axios.get(`${baseURL}/parts/${flourish.value}`)
-  ]
-  return Promise.all(promises)
-  .then(result => {
-    const shroom = {
-      name: name.value,
-      cap: result[0].data.path,
-      base: result[1].data.path,
-      mouth: result[2].data.path,
-      eyes: result[3].data.path,
-      eyeballs: result[4].data.path,
-      eyebrows: result[5].data.path,
-      flourish: result[6].data.path,
-      cap_color_1: color1.value,
-      cap_color_2: color2.value
-    }
-    return shroom
-  })
-}
-
 function makeShroomCard(shroom) {
   const { name, cap, base, mouth, eyes, eyeballs, eyebrows, flourish, cap_color_1, cap_color_2 } = shroom
   color = `linear-gradient(${cap_color_1}, ${cap_color_2})`
