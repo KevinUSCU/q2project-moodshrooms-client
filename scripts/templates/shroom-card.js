@@ -34,10 +34,7 @@ function getShroomFromForm() {
 
 function makeShroomCard(shroom) {
   const { name, cap, base, mouth, eyes, eyeballs, eyebrows, flourish, cap_color_1, cap_color_2 } = shroom
-  // Check for no cap color, single cap color, or gradient cap color
-  if (cap_color_1 && cap_color_2) color = `linear-gradient(${cap_color_1}, ${cap_color_2})`
-  else if (cap_color_1) color = cap_color_1
-  else color = '#ffffff'
+  color = `linear-gradient(${cap_color_1}, ${cap_color_2})`
   // Create card element
   let shroomCard = ''
   // If shroom has an id (from database) add it as id tag
