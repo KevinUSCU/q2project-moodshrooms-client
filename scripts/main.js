@@ -1,7 +1,7 @@
 // Following line is to connect to deployed Heroku server
-// const baseURL = 'https://kevinuscu-q2project-moodshrooms-server.herokuapp.com'
+const baseURL = 'https://kevin-q2prj-moodshrooms-srv.herokuapp.com'
 // Following line is to connect to locally hosted server
-const baseURL = 'http://localhost:3000'
+// const baseURL = 'http://localhost:3000'
 
 // Check for logged in user
 let shroomUser = JSON.parse(localStorage.getItem('shroomUser'))
