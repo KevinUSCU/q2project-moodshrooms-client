@@ -82,6 +82,6 @@ function editShroom() {
       </div>
     `
     // wait 1 second then go to shroom view page
-    setTimeout(() => window.location=`shroom.html#/shroom/${shroomId}`, 1000)
+    setTimeout(() => window.location=`view-shroom.html#/shroom/${shroomId}`, 1000)
   })
 }
