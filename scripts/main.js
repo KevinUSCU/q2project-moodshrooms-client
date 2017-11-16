@@ -35,6 +35,7 @@ function logout() {
 
 function login() {
   localStorage.setItem('shroomUser', JSON.stringify({ id: 1, username: 'Kevin' }))
+  // Reload user data
   shroomUser = JSON.parse(localStorage.getItem('shroomUser'))
   setNavbar(shroomUser)
 }
