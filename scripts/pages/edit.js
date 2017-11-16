@@ -37,6 +37,9 @@ Promise.all(promises)
   color1.value = shroomToEdit.cap_color_1
   color2.value = shroomToEdit.cap_color_2
   displayPreview()
+  // Set shroom card image size
+  resizeShroomCard() // on page load
+  window.onresize = resizeShroomCard //on window resize
   // Check user to see if they own this shroom
   if (shroomUser.id !== shroomToEdit.owner_id) {
     // display error instead of update button
@@ -84,4 +87,11 @@ function editShroom() {
     // wait 1 second then go to shroom view page
     setTimeout(() => window.location=`view-shroom.html#/shroom/${shroomId}`, 1000)
   })
+}
+
+function resizeShroomCard() {
+  const navbar = document.querySelector('.navbar')
+  let winHeight = window.innerHeight - navbar.clientHeight
+  let width = winHeight / 2
+  preview.style.width = `${width}px`
 }

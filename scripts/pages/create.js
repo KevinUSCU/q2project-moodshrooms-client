@@ -15,9 +15,14 @@ const messageBox = document.querySelector('#submit-message')
 
 // Populate Form Menus then load initial preview image
 populateFormMenus()
-.then(() => displayPreview())
+.then(() => {
+  displayPreview()
+  // Set shroom card image size
+  resizeShroomCard() // on page load
+})
 // Update shroom preview on form change
 form.addEventListener('change', displayPreview)
+window.onresize = resizeShroomCard //on window resize
 // Form submit listener
 form.addEventListener('submit', event => {
   event.preventDefault()
@@ -51,4 +56,11 @@ function createShroom() {
     // wait 1 second then go to shroom view page
     setTimeout(() => window.location=`view-shroom.html#/shroom/${result.data.id}`, 1000)
   })
+}
+
+function resizeShroomCard() {
+  const navbar = document.querySelector('.navbar')
+  let winHeight = window.innerHeight - navbar.clientHeight
+  let width = winHeight / 2
+  preview.style.width = `${width}px`
 }

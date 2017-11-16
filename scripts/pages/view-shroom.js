@@ -16,7 +16,7 @@ getShroomFromDB(shroomId)
 
 function resizeLargeShroomContainer() {
   const navbar = document.querySelector('.navbar')
-  let winHeight = window.innerHeight - navbar.clientHeight - 100 // subtract navbar height and extra padding
-  let width = ( winHeight / 4 ) * 3
+  let winHeight = window.innerHeight - navbar.clientHeight
+  let width = winHeight / 1.6
   container.style.width = `${width}px`
 }
