@@ -41,6 +41,7 @@ function attachParts(shroom) {
   return Promise.all(promises)
   .then(result => {
     mergedShroom = {
+      id: shroom.id,
       user_id: shroom.user_id, // these values are needed for displaying myshrooms
       owner_id: shroom.owner_id, // these values are needed for displaying myshrooms
       name: shroom.name,
