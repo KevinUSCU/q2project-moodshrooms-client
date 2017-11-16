@@ -52,7 +52,8 @@ function attachParts(shroom) {
       eyebrows: result[5].data.path,
       flourish: result[6].data.path,
       cap_color_1: shroom.cap_color_1,
-      cap_color_2: shroom.cap_color_2
+      cap_color_2: shroom.cap_color_2,
+      updated_at: shroom.updated_at
     }
     return mergedShroom
   })
