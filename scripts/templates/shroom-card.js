@@ -15,9 +15,7 @@ function makeShroomCard(shroom) {
       <img class="card-img-top" src="${eyeballs}" style="position: absolute">
       <img class="card-img-top" src="${flourish}" style="position: absolute">
       <img class="card-img-top" src="${eyebrows}" style="position: absolute">
-      <div class="card-body bg-secondary text-white">
-        <h4 class="card-title text-center" style="margin: 0;">${name}</h4>
-      </div>
+      <div class="card-header bg-secondary text-white text-center">${name}</div>
     </div>
   `
   return shroomCard
