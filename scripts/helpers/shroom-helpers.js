@@ -1,6 +1,16 @@
 function getShroomFromDB(id) {
   return axios.get(`${baseURL}/shrooms/${id}`)
-    .then(shroom => shroom.data)
+  .then(shroom => shroom.data)
+}
+
+function getShroomsOwnedByUser(userId) {
+  return axios.get(`${baseURL}/shrooms?owner=${userId}`)
+  .then(shrooms => shrooms.data)
+}
+
+function getShroomsSharedWithUser(userId) {
+  return axios.get(`${baseURL}/shrooms?shared=${userId}`)
+  .then(shrooms => shrooms.data)
 }
 
 function getShroomFromForm() {
@@ -31,6 +41,8 @@ function attachParts(shroom) {
   return Promise.all(promises)
   .then(result => {
     mergedShroom = {
+      user_id: shroom.user_id, // these values are needed for displaying myshrooms
+      owner_id: shroom.owner_id, // these values are needed for displaying myshrooms
       name: shroom.name,
       cap: result[0].data.path,
       base: result[1].data.path,
