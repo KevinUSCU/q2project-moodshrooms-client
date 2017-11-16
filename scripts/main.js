@@ -14,8 +14,32 @@ resizeBkgImage() // on page load
 window.onresize = resizeBkgImage //on window resize
 
 // Check for logged in user
-localStorage.setItem('shroomUser', JSON.stringify({ id: 1, username: 'Kevin' }))
-// localStorage.removeItem('shroomUser')
+// localStorage.setItem('shroomUser', JSON.stringify({ id: 1, username: 'Kevin' }))
 let shroomUser = JSON.parse(localStorage.getItem('shroomUser'))
 // If user not logged in, redirect to intro page
 if (!shroomUser && window.location.pathname !== '/index.html') window.location='index.html'
+
+// Set navbar based on user state
+const nav = document.querySelector('#navbarSupportedContent')
+if (shroomUser) {
+  nav.innerHTML = navbarSignedIn()
+  const logoutButton = document.querySelector('#nav-logout-button')
+  const myShroomsButton = document.querySelector('#nav-shrooms-button')
+  const createButton = document.querySelector('#nav-create-button')
+  logoutButton.addEventListener('click', logout)
+  myShroomsButton.addEventListener('click', () => window.location='view-myshrooms.html')
+  createButton.addEventListener('click', () => window.location='create.html')
+} else {
+  nav.innerHTML = navbarSignedOut()
+  const loginButton = document.querySelector('#nav-login-button')
+  loginButton.addEventListener('click', login)
+}
+
+function logout() {
+  localStorage.removeItem('shroomUser')
+  window.location='index.html'
+}
+
+function login() {
+
+}

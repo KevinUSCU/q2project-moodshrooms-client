@@ -4,13 +4,19 @@ body {
 
 .navbar-brand {
   font-family: 'Amatic SC', cursive;
-  font-size: 3rem;
+  font-size: 3.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#username {
+  font-size: 2rem;
 }
 
 main {
   width: 100%;
   background-size: cover;
-  background-position: center bottom;
+  background-position: center;
 }
 
 #bkg-credit {
