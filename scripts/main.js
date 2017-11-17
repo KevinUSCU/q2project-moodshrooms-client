@@ -1,5 +1,5 @@
 // Following line is to connect to deployed Heroku server
-const baseURL = 'https://kevin-q2prj-moodshrooms-srv.herokuapp.com'
+const baseURL = 'http://kevin-q2prj-moodshrooms-srv.herokuapp.com'
 // Following line is to connect to locally hosted server
 // const baseURL = 'http://localhost:3000'
 
