@@ -42,6 +42,7 @@ function createUser() {
     login()
   })
   .catch(err => {
+    console.log(err)
     // display error
     newUserMessageBox.innerHTML = `
       <div class="alert alert-alert" role="alert">
