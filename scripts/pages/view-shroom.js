@@ -1,6 +1,6 @@
 const shroomId = getShroomIdFromURL()
 const container = document.querySelector('#shroom-view')
-const messagebox = document.querySelector('#messagebox')
+const messageBox = document.querySelector('#messagebox')
 
 // Button Listeners
 const share = document.querySelector('#share')
