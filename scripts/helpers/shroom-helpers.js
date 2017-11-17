@@ -73,5 +73,5 @@ function getShroomIdFromURL() {
 }
 
 function deleteShroom(id) {
-  axios.delete(`${baseURL}/shrooms/${id}`)
+  return axios.delete(`${baseURL}/shrooms/${id}`)
 }
