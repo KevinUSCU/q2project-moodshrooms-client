@@ -1,5 +1,6 @@
 const shroomId = getShroomIdFromURL()
 const container = document.querySelector('#shroom-view')
+const messagebox = document.querySelector('#messagebox')
 
 // Button Listeners
 const share = document.querySelector('#share')
@@ -7,7 +8,19 @@ const edit = document.querySelector('#edit')
 const del = document.querySelector('#delete')
 share.addEventListener('click', () => {})
 edit.addEventListener('click', () => window.location=`edit.html#/shroom/${shroomId}`)
-del.addEventListener('click', () => deleteShroom(shroomId))
+del.addEventListener('click', () => {
+  deleteShroom(shroomId)
+  .then(result => {
+    // display success
+    messageBox.innerHTML = `
+      <div class="alert alert-info" role="alert">
+        Moodshroom squashed!
+      </div>
+    `
+    // wait 1 second then go to myshrooms page
+    setTimeout(() => window.location=`view-myshrooms.html`, 1000)
+  })
+})
 
 // Set shroom card image size
 resizeShroomContainer() // on page load
