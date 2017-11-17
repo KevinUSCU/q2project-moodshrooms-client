@@ -71,3 +71,7 @@ function displayPreview() {
 function getShroomIdFromURL() {
   return window.location.hash.replace('#/shroom/', '')
 }
+
+function deleteShroom(id) {
+  axios.delete(`${baseURL}/shrooms/${id}`)
+}
