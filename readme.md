@@ -14,11 +14,11 @@ of jQuery. Axios is used for sending requests to the server.
 
 ## Screenshots
 
-![](sm-moodshrooms-1.jpg)
-![](sm-moodshrooms-2.jpg)
-![](sm-moodshrooms-3.jpg)
-![](sm-moodshrooms-4.jpg)
-![](sm-moodshrooms-5.jpg)
+![](screenshots/sm-moodshrooms-1.jpg)
+![](screenshots/sm-moodshrooms-2.jpg)
+![](screenshots/sm-moodshrooms-3.jpg)
+![](screenshots/sm-moodshrooms-4.jpg)
+![](screenshots/sm-moodshrooms-5.jpg)
 
 ## Installation
 1. npm install
