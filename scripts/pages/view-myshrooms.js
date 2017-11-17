@@ -3,8 +3,8 @@ const container = document.querySelector('#shroom-bento')
 
 // Display all shrooms
 const getShroomsPromises = [
-  getShroomsOwnedByUser(1),
-  getShroomsSharedWithUser(2)
+  getShroomsOwnedByUser(userId),
+  getShroomsSharedWithUser(userId)
 ]
 Promise.all(getShroomsPromises)
 .then(result => {
