@@ -2,7 +2,9 @@ function navbarSignedOut() {
   return `
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <button id="nav-login-button" class="btn btn-success my-2 my-sm-0" type="button">Sign In</button>
+        <button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target="#loginModal">
+          Sign In
+        </button>
       </li>
     </ul>
   `

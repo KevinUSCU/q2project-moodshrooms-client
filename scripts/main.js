@@ -3,7 +3,7 @@ const baseURL = 'https://kevinuscu-moodshrooms-server.herokuapp.com'
 // Following line is to connect to locally hosted server
 // const baseURL = 'http://localhost:3000'
 
-// Check for logged in user
+// Check for currently logged in user
 let shroomUser = JSON.parse(localStorage.getItem('shroomUser'))
 // If user not logged in, redirect to intro page
 if (!shroomUser && window.location.pathname !== '/index.html') window.location='index.html'
