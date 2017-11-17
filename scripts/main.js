@@ -45,7 +45,7 @@ function createUser() {
     // display error
     newUserMessageBox.innerHTML = `
       <div class="alert alert-alert" role="alert">
-        ${error}
+        ${error.response.data.error}
       </div>
     `
   })
