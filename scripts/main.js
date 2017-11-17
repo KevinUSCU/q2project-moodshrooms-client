@@ -54,13 +54,13 @@ function validateUser() {
   .then(result => {
     localStorage.setItem('shroomUser', JSON.stringify({ id: result, username: loginUsername }))
     // display success
-    newUserMessageBox.innerHTML = `
+    loginMessageBox.innerHTML = `
       <div class="alert alert-info" role="alert">
         Welcome back!
       </div>
     `
     // wait 1 second then clear modal
-    setTimeout(() => $('#loginUserModal').modal('hide'), 1000)
+    setTimeout(() => $('#loginModal').modal('hide'), 1000)
     login()
   })
   .catch(error => {
