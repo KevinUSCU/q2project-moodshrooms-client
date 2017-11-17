@@ -49,13 +49,22 @@
             </button>
           </div>
           <div class="modal-body">
-          
+            <form>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter your username">
+              </div>
+              <div class="form-group">
+                <label for="key">Key</label>
+                <input type="password" class="form-control" id="key" placeholder="Enter your secret key">
+              </div>
+            </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#newUserModal" data-dismiss="modal">
               Create a New Account
             </button>
-            <button type="button" class="btn btn-success">Sign In</button>
+            <button id="validate" type="button" class="btn btn-success">Sign In</button>
           </div>
         </div>
       </div>
@@ -71,10 +80,19 @@
             </button>
           </div>
           <div class="modal-body">
-          
+            <form>
+              <div class="form-group">
+                <label for="new-username">Username</label>
+                <input type="text" class="form-control" id="new-username" placeholder="Choose a username">
+              </div>
+              <div class="form-group">
+                <label for="new-key">Key</label>
+                <input type="password" class="form-control" id="new-key" placeholder="Choose a secret key">
+              </div>
+            </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success">Submit</button>
+            <button id="create-new-user" type="button" class="btn btn-success">Submit</button>
           </div>
         </div>
       </div>
