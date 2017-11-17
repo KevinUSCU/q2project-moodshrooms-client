@@ -28,7 +28,7 @@ newUserButton.addEventListener('click', createUser)
 function createUser() {
   const newUsername = document.querySelector('#new-username').value
   const newKey = document.querySelector('#new-key').value
-  axiom.post(`${baseURL}/users`, { username: newUsername, key: newKey })
+  axios.post(`${baseURL}/users`, { username: newUsername, key: newKey })
   .then(result => {
     localStorage.setItem('shroomUser', JSON.stringify({ id: result, username: newUsername }))
     // display success
