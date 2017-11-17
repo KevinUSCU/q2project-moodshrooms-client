@@ -6,7 +6,7 @@ const messageBox = document.querySelector('#messagebox')
 const share = document.querySelector('#share')
 const edit = document.querySelector('#edit')
 const del = document.querySelector('#delete')
-share.addEventListener('click', () => {})
+share.addEventListener('click', () => shareWithAllUsers(shroomId))
 edit.addEventListener('click', () => window.location=`edit.html#/shroom/${shroomId}`)
 del.addEventListener('click', () => {
   deleteShroom(shroomId)
@@ -37,8 +37,10 @@ getShroomFromDB(shroomId)
       const shroomCard = document.querySelector('.shroom-card')
       const badge = makeSharedBadge()
       shroomCard.appendChild(badge)
-      // Hide delete button
-      del.style.display = 'none'
+    } else {
+      // Enable share and delete buttons
+      share.style.display = 'block'
+      del.style.display = 'block'
     }
   })
 })
