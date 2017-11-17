@@ -12,6 +12,56 @@ if (!shroomUser && window.location.pathname !== '/index.html') window.location='
 const nav = document.querySelector('#navbarSupportedContent')
 setNavbar(shroomUser)
 
+// Login handlers
+const loginUsername = document.querySelector('#username')
+const loginKey = document.querySelector('#key')
+const validateButton = document.querySelector('#validate')
+const loginMessageBox = document.querySelector('#login-message-box')
+
+
+const newUserButton = document.querySelector('#create-new-user')
+const newUserMessageBox = document.querySelector('#new-user-message-box')
+
+validateButton.addEventListener('click', login)
+newUserButton.addEventListener('click', createUser)
+
+function createUser() {
+  const newUsername = document.querySelector('#new-username').value
+  const newKey = document.querySelector('#new-key').value
+  axiom.post(`${baseURL}/users`, { username: newUsername, key: newKey })
+  .then(result => {
+    localStorage.setItem('shroomUser', JSON.stringify({ id: result, username: newUsername }))
+    // display success
+    newUserMessageBox.innerHTML = `
+      <div class="alert alert-info" role="alert">
+        Account created. Welcome!
+      </div>
+    `
+    // wait 1 second then clear modal
+    setTimeout(() => $('#newUserModal').modal('hide'), 1000)
+    login()
+  })
+  .catch(err => {
+    // display error
+    newUserMessageBox.innerHTML = `
+      <div class="alert alert-alert" role="alert">
+        ${err.error}
+      </div>
+    `
+  })
+}
+
+function login() {
+  // Load user data
+  shroomUser = JSON.parse(localStorage.getItem('shroomUser'))
+  setNavbar(shroomUser)
+}
+
+function logout() {
+  localStorage.removeItem('shroomUser')
+  window.location='index.html'
+}
+
 function setNavbar(user) {
   if (user) {
     nav.innerHTML = navbarSignedIn()
@@ -23,19 +73,5 @@ function setNavbar(user) {
     createButton.addEventListener('click', () => window.location='create.html')
   } else {
     nav.innerHTML = navbarSignedOut()
-    const loginButton = document.querySelector('#nav-login-button')
-    loginButton.addEventListener('click', login)
   }
-}
-
-function logout() {
-  localStorage.removeItem('shroomUser')
-  window.location='index.html'
-}
-
-function login() {
-  localStorage.setItem('shroomUser', JSON.stringify({ id: 1, username: 'Kevin' }))
-  // Reload user data
-  shroomUser = JSON.parse(localStorage.getItem('shroomUser'))
-  setNavbar(shroomUser)
 }
