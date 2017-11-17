@@ -41,12 +41,11 @@ function createUser() {
     setTimeout(() => $('#newUserModal').modal('hide'), 1000)
     login()
   })
-  .catch(err => {
-    console.log(err)
+  .catch(error => {
     // display error
     newUserMessageBox.innerHTML = `
       <div class="alert alert-alert" role="alert">
-        ${err.error}
+        ${error}
       </div>
     `
   })
