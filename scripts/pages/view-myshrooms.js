@@ -19,10 +19,7 @@ Promise.all(getShroomsPromises)
       newCard.innerHTML = makeShroomCard(shroom)
       // Add badge to shrooms shared with user. These are those whose owner_id does not match the user.
       if (shroom.owner_id !== userId) {
-        const badge = document.createElement('div')
-        badge.classList = 'badge badge-pill badge-success'
-        badge.style = 'position: absolute; top: 20px; right: 20px;'
-        badge.innerText = 's'
+        const badge = makeSharedBadge()
         newCard.appendChild(badge)
       }
       container.appendChild(newCard)

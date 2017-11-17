@@ -11,6 +11,11 @@ getShroomFromDB(shroomId)
   attachParts(shroom)
   .then(result => {
     container.innerHTML = makeShroomCard(result)
+    if (shroomId !== shroom.owner_id) { //add badge
+      const shroomCard = document.querySelector('.shroom-card')
+      const badge = makeSharedBadge()
+      shroomCard.appendChild(badge)
+    }
   })
 })
 
