@@ -12,7 +12,7 @@ function createUser() {
   const newKey = document.querySelector('#new-key').value
   axios.post(`${baseURL}/users`, { username: newUsername, key: newKey })
   .then(result => {
-    localStorage.setItem('shroomUser', JSON.stringify({ id: result, username: newUsername }))
+    localStorage.setItem('shroomUser', JSON.stringify({ id: result.data, username: newUsername }))
     // display success
     newUserMessageBox.innerHTML = `
       <div class="alert alert-info" role="alert">
@@ -38,7 +38,7 @@ function validateUser() {
   const loginKey = document.querySelector('#key').value
   axios.post(`${baseURL}/users/${loginUsername}`, { key: loginKey })
   .then(result => {
-    localStorage.setItem('shroomUser', JSON.stringify({ id: result, username: loginUsername }))
+    localStorage.setItem('shroomUser', JSON.stringify({ id: result.data, username: loginUsername }))
     // display success
     loginMessageBox.innerHTML = `
       <div class="alert alert-info" role="alert">
