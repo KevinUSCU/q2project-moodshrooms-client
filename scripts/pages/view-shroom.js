@@ -19,6 +19,14 @@ getShroomFromDB(shroomId)
   })
 })
 
+// Button Listeners
+const share = document.querySelector('#share')
+const edit = document.querySelector('#edit')
+const del = document.querySelector('#delete')
+share.addEventListener('click', () => {})
+edit.addEventListener('click', () => window.location=`edit.html#/shroom/${shroomId}`)
+del.addEventListener('click', () => deleteShroom(shroomId))
+
 function resizeShroomContainer() {
   const navbar = document.querySelector('.navbar')
   let winHeight = window.innerHeight - navbar.clientHeight
